@@ -126,6 +126,32 @@ a:hover {
   align-items: start;
 }
 
+/* 右侧栏：照片 + 信息卡片 */
+.hero-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* 照片容器 */
+.hero-photo-wrap {
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background: var(--color-surface);
+}
+
+/* 个人照片 */
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .hero-label {
   font-size: 0.85rem;
   font-weight: 600;
@@ -537,6 +563,12 @@ a.contact-card:hover {
 
   .hero-inner {
     grid-template-columns: 1fr;
+  }
+
+  /* 手机端照片居中显示 */
+  .hero-aside {
+    max-width: 280px;
+    margin: 0 auto;
   }
 
   .hero h1 {
